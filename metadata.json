@@ -1,0 +1,14 @@
+{
+  "name": "puppet-avi_lbaas",
+  "version": "0.1.0",
+  "author": "quanbo",
+  "summary": "Module for installing and configuring Avi LBaaS openstack plugin",
+  "license": "Apache 2.0",
+  "source": "https://github.com/twc-openstack/puppet-avi_lbaas.git",
+  "project_page": "https://github.com/twc-openstack/puppet-avi_lbaas",
+  "issues_url": "https://github.com/twc-openstack/puppet-avi_lbaas/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
