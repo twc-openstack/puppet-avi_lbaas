@@ -16,6 +16,6 @@ class avi_lbaas (
 ) {
   if $enabled {
     include avi_lbaas::install
-    include avi_lbaas:config
+    include avi_lbaas::config
   }
 }
