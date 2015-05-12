@@ -8,9 +8,8 @@ class avi_lbaas::config (
   $admin_user           = 'admin',
   $admin_password       = undef,
 ) {
-  $avi_installer_location = '/opt/avi/openstack_lbplugin/install.sh'
-  $cmd = join([
-    "${avi_installer_location}",
+  $avi_install_script = join([
+    "./install.sh",
     "--aip ${avi_controller_ip}",
     "--aname ${provider_name}",
     "--auser '${admin_user}'",
@@ -18,8 +17,10 @@ class avi_lbaas::config (
     "--reuse-sp --no-prompt --update"],
     ' ')
 
-  exec {"Avi plugin install script":
-    command => $cmd,
+  exec { 'Avi plugin install script':
+    command  => $avi_install_script,
+    cwd      => '/opt/avi/openstack_lbplugin',
+    provider => shell,
     require => Package['avi-lbaas-driver'],
   }
 }

@@ -2,15 +2,6 @@
 #
 # This module installs and configures the Avi LBaaS openstack plugin 
 #
-# === Parameters
-#
-# Document parameters here.
-#
-# === Examples
-#
-#  class { 'avi_lbaas':
-#  }
-#
 class avi_lbaas (
   $enabled = false, 
 ) {
